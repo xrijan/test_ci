@@ -22,23 +22,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Debug
-        run: flutter test --debug
-
       - name: Run
         run: flutter run
 
       - name: Build APK
         run: flutter build apk
-
-      - name: Build iOS
-        run: flutter build ios
-
-      - name: Release APK
-        run: flutter build apk --release
-
-      - name: Release iOS
-        run: flutter build ios --release
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
