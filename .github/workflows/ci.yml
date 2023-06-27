@@ -14,7 +14,9 @@ jobs:
 
     steps:
       - name: Set up Flutter
-        uses: subosito/flutter-action@v1
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: stable
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,12 +27,6 @@ jobs:
       - name: Test
         run: flutter test
 
-      - name : Create
-        run: flutter create
-
-      - name: Run
-        run: flutter run
-
       - name: Build APK
         run: flutter build apk
 
@@ -40,4 +36,3 @@ jobs:
           name: build-results
           path: |
             ./build/app/outputs/apk/
-            ./build/ios/
