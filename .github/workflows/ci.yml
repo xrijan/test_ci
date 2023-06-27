@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Run
-        run: flutter run
+      - name: Run android
+        run: flutter run android
 
       - name: Build APK
         run: flutter build apk
