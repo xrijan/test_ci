@@ -25,6 +25,9 @@ jobs:
       - name: Test
         run: flutter test
 
+      - name : Create
+        run: flutter create
+
       - name: Run
         run: flutter run
 
